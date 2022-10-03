@@ -1,4 +1,6 @@
-export function Certificate(props) {
+import React from "react";
+
+export function Certificate(props: any) {
     return <div className="relative">
         <dt>
             <div className="absolute flex h-14 w-14 items-center justify-center rounded-md bg-indigo-500 text-white">
@@ -8,6 +10,6 @@ export function Certificate(props) {
             </div>
             <p className="ml-16 text-lg font-medium leading-6 text-gray-900 text-left">{props.name}</p>
         </dt>
-        <dd className="mt-2 ml-16 text-base text-gray-500 text-left"><strong>Centro:</strong> {props.place} - {props.year} {props.time ? '- ' + props.time : ''}</dd>
+        <dd className="mt-2 ml-16 text-base text-gray-500 text-left"><strong>{props.place} - {props.year} {props.time ? '- ' + props.time : ''}</strong> </dd>
     </div>;
 }

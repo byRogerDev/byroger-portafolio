@@ -1,6 +1,8 @@
-export function IconTech(props) {
+import React from "react";
 
-    const path = './img/tech/' +props.img  
+export function IconTech(props:any) {
+
+    const path = '/img/tech/' +props.img  
 
     return (
       <div className="flex items-center flex-row p-1">

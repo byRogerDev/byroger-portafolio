@@ -1,4 +1,4 @@
-type Certificate = { 
+export type Certificate = { 
     name?: String,
     description?: String, 
     hour?: number,

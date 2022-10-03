@@ -1,10 +1,11 @@
 import { IconTech } from "./icon-tech";
 import moment from 'moment'
 import 'moment/locale/es';
+import React from "react";
 
 moment.locale('es');
 
-export function Challenge(props) {
+export function Challenge(props: any) {
 
 
     return (<div className='relative'>
@@ -19,8 +20,8 @@ export function Challenge(props) {
 
 
     <dd className="mt-2 ml-16 text-base text-gray-500 text-left">
-    {props?.techs?.map(({ name, img }, index) => (
-      <IconTech name={name} img={img}></IconTech>
+    {props?.techs?.map(({ name, img }: any, index: number) => (
+      <IconTech id={index} name={name} img={img}></IconTech>
     ))}
     </dd>
   </div>);
