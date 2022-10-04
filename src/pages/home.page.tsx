@@ -41,7 +41,13 @@ export function HomePage(props: any) {
         { id: 21, name: 'NativeScript', img: 'nativescript.png' },
         { id: 22, name: 'Tomcat', img: 'Apache_Tomcat_logo.svg' },
         { id: 23, name: 'Geoserver', img: 'geoserver_goux6a.png' },
-        { id: 24, name: 'Magento', img: 'magento.png' }
+        { id: 24, name: 'Magento', img: 'magento.png' },
+        { id: 25, name: 'NodeJS', img: 'nodejs.png' },
+        { id: 26, name: 'ExpressJS', img: 'express.png' },
+        { id: 27, name: 'Prisma', img: 'prisma.png' },
+        { id: 28, name: 'MySQL', img: 'mysql.png' },
+        { id: 29, name: 'MSSQL', img: 'mssql.png' },
+        { id: 30, name: 'EntityFramework', img: 'entityFramework.png' }
     ];
 
     const academies = [
@@ -71,7 +77,7 @@ export function HomePage(props: any) {
                 'Actualmente formo parte de los responsables de área realizando mis tareas 100% en remoto.'
             ],
             start: new Date('2020/12/10'), end: Date.now(),
-            techs: [techs[1], techs[2], techs[6], techs[8], techs[13], techs[15], techs[18], techs[19], techs[20], techs[24]],
+            techs: [techs[1], techs[2], techs[6], techs[8], techs[13], techs[15], techs[18], techs[19], techs[20], techs[24], techs[29], techs[30]],
         },
         {
             name: 'Xtrategics (Consultoría de negocio digital, S.L.L )', year: '03/2018 - 12/2020',
@@ -104,14 +110,14 @@ export function HomePage(props: any) {
                 'Desarrollo de proyecto semilla donde se basaban todos los proyectos con stack PHP para webs corporativas, similar a un wordpress propio para poder competir a nivel de SEO.'
             ],
             start: new Date('2018/03/15'), end: new Date('2020/12/13'),
-            techs: [techs[0], techs[6], techs[12], techs[18], techs[19], techs[20], techs[21], techs[24]],
+            techs: [techs[0], techs[6], techs[12], techs[18], techs[19], techs[20], techs[21], techs[24], techs[28], techs[29]],
         },
         {
             name: 'Vola Los del Internet S.L.', year: '10/2016 - 06/2017', 
             img: 'business/vola.jfif', link: 'vola',
             description: 'Instalación de hardware de telecomunicación en clientes finales, y empresas, atención al cliente y soporte, tratamiento de la información, y desarrollo web para monitorización de hardware en PHP.',
             start: new Date('2016/10/01'), end: new Date('2017/06/20'),
-            techs: [techs[0], techs[6], techs[12], techs[18], techs[19]],
+            techs: [techs[0], techs[6], techs[12], techs[18], techs[19], techs[28]],
         },
         {
             name: 'Con Hector Sistemas Informáticos', year: '08/2013 - 01/2016', 
@@ -122,7 +128,7 @@ export function HomePage(props: any) {
                 'Profesor de distintos cursos de ofimática para grupos de niños, adultos y gente mayor.'
             ],
             start: new Date('2013/08/28'), end: new Date('2016/01/08'),
-            techs: [techs[0], techs[6], techs[12], techs[18], techs[19]],
+            techs: [techs[0], techs[6], techs[12], techs[18], techs[19], techs[28]],
         },
         {
             name: 'Neo Diagnostica, S.L.', year: '05/2013 - 04/2014', 
@@ -132,7 +138,7 @@ export function HomePage(props: any) {
                 'Mis inicios, donde aplicar el poco conocimiento de maquetación y PHP aprendido de forma autodidacta, con mi primer gran reto; una pasarela de pago.',
             ],
             start: new Date('2013/05/01'), end: new Date('2014/04/30'),
-            techs: [techs[0], techs[6], techs[12], techs[18], techs[19]],
+            techs: [techs[0], techs[6], techs[12], techs[18], techs[19], techs[28]],
         },
     ];
 
@@ -158,7 +164,7 @@ export function HomePage(props: any) {
                 'Las principales características son; dar de alta tareas, imputar tiempos contra esas tareas, tener un grupo de usuarios con tareas compartidas, privilegios de usuarios que definen si pueden crear tareas compartidas, o, gestionar los festivos y vacaciones, sacar las gráficas de los tiempos imputados por día, semana y mes, y llevar la cuenta diaria, semanal, mensual y total, de horas realizadas, mostrando las horas de más y las de menos.'
             ],
             start: new Date('2022/06/23'), end: Date.now(),
-            techs: [techs[3], techs[4], techs[5], techs[0], techs[10]],
+            techs: [techs[3], techs[4], techs[5], techs[0], techs[10], techs[28]],
             gallery:[
                 {
                     alt: 'Menu',
@@ -193,7 +199,7 @@ export function HomePage(props: any) {
                 'Uno de los proyectos personales más importantes en producción en colaboración con empresa de fabricación de hardware.'
             ],
             start: new Date('2020/11/08'), end: Date.now(),
-            techs: [techs[1], techs[3], techs[4], techs[13], techs[6], techs[5], techs[0], techs[10], techs[22], techs[23]],
+            techs: [techs[1], techs[3], techs[4], techs[13], techs[6], techs[5], techs[0], techs[10], techs[22], techs[23], techs[28]],
             gallery:[
                 {
                     alt: 'Dashboard',
@@ -241,10 +247,12 @@ export function HomePage(props: any) {
             description: [
                 'Página actual donde te encuentras, en este proyecto busco dar mis primeros pasos con React y Tailwind.',
                 'Siempre decía: tengo que hacer mi propia web, pero nunca encontraba el tiempo, me motivaba más aprender una nueva tecnología a hacer avanzar este tipo de proyecto, pero llego el día de empezar, y aprovecharlo para desarrollar en React.',
-                'El día de la programación de este año, después de ver la Miduconf y durante la emisión de un directo donde hacían una prueba técnica a un Junior con React. Decidí crear un proyecto con esa tecnología y probar, y para aprovechar este proyecto, quise cubrir esa inquietud de tener mi portafolio disponible para mostrar siempre a tiempo real.'
+                'El día de la programación de este año, después de ver la Miduconf y durante la emisión de un directo donde hacían una prueba técnica a un Junior con React. Decidí crear un proyecto con esa tecnología y probar, y para aprovechar este proyecto, quise cubrir esa inquietud de tener mi portafolio disponible para mostrar siempre a tiempo real.',
+                'Tambien inicio la creación de la API con NodeJs y TS, usando el ORM de Prisma para gestionar los datos de una base de datos MySQL.'
+
             ],
             start: new Date('2022/09/14'), end: Date.now(),
-            techs: [techs[14], techs[13], techs[6], techs[17]],
+            techs: [techs[14], techs[13], techs[6], techs[17], techs[25], techs[26], techs[27], techs[28]],
         },
         {
             name: 'Parchís vitaminado', link: 'parchis-vitaminado',
@@ -310,7 +318,7 @@ export function HomePage(props: any) {
                 },
             ],
             start: new Date('2020/04/10'), end: new Date('2020/08/10'),
-            techs: [techs[16], techs[13], techs[6], techs[5]],
+            techs: [techs[16], techs[13], techs[6], techs[5], techs[28]],
         }
     ];
 

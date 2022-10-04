@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from "react";
 import { Technologies } from '../interfaces/UserInfo';
 
-const baseURL = "http://localhost:3001/technologies";
+const baseURL = process.env.REACT_APP_API_BASE + "technologies";
 
 
 export async function  getEntries(): Promise<Technologies[]> {
