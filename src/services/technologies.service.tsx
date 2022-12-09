@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from "react";
 import { Technology } from '../types/profesional';
 
 const baseURL = process.env.REACT_APP_API_BASE + "technologies";

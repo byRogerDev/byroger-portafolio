@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ProfesionalProject } from '../types/profesional';
 import { ElementCV } from './card-element'
 
 export function FormacionProfesional(props: any) {
@@ -15,8 +16,8 @@ export function FormacionProfesional(props: any) {
                         <div className="mt-10">
                             <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
 
-                                {props.alterProjects.map(({ name, year, description, techs, start, end, img, gallery, link }: any, index: number) => (
-                                    <ElementCV key={'alterProjects' + index} index={index} name={name} year={year} description={description} techs={techs} start={start} end={end} img={img} gallery={gallery} link={link}></ElementCV>
+                                {props.alterProjects.map((personal: ProfesionalProject, index: number) => (
+                                    <ElementCV key={'ElementCV_alterProjects_' + index}  name={personal.name} year={personal.year} description={personal.description} techs={personal.technologies} start={personal.start} end={personal.end?personal.end: Date.now()} img={personal.img} gallery={personal.gallery} link={personal.link}></ElementCV>
                                 ))}
 
 

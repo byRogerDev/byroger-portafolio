@@ -4,8 +4,3 @@ export interface UserInfo{
     email: string;
 }
 
-export interface Technologies {
-    id: number;
-    name: string;
-    img: string;
-}

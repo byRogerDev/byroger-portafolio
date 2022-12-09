@@ -1,9 +1,6 @@
 import { IconTech } from "./icon-tech";
-import moment from 'moment'
-import 'moment/locale/es';
 import React from "react";
 
-moment.locale('es');
 
 export function Challenge(props: any) {
 

@@ -3,16 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IconTech } from "./icon-tech";
 import { IconCard } from "./icon-card";
-import moment from 'moment'
-import 'moment/locale/es';
-import Masonry from 'react-masonry-css'
+import { DateTime } from 'luxon';import Masonry from 'react-masonry-css'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import { ItemGallery } from "../types/profesional";
 
 
-moment.locale('es');
 
 export function ElementCV(element: any) {
+
+  //console.log(element);
 
     const breakpointColumnsObj = {
       default: element.gallery?.length > 3 ? 3: element.gallery?.length,
@@ -21,8 +21,10 @@ export function ElementCV(element: any) {
       500: 1
     }; 
 
+
+
     const classAcademyAux = (element.index && element.index > 0 && 'place' in element)?'md:col-start-2':'';
-    const isCurrent = (moment(element.end).format('MM/Y') === moment().format('MM/Y'))?true:false;
+    const isCurrent = (DateTime.fromJSDate(new Date(element.end)).toFormat('MM/y') === DateTime.now().toFormat('MM/y'))?true:false;
 
     const classAux = (element.index && element.index%2 !== 0 && ( (element.tag && element.tag !== 'academy') || !element.tag))?'relative  md:pt-20':'relative';
 
@@ -38,7 +40,7 @@ export function ElementCV(element: any) {
       {!element.link && <p className="ml-16 text-lg font-medium leading-6 text-gray-900 text-left">{element.name}</p>}
     </dt>
     {element.start == null && <dd className="mt-2 ml-16 text-base text-gray-500 text-left"><strong>{element.year} - { element.place}</strong></dd> }
-    {element.start && <dd className="mt-2 ml-16 text-base text-gray-500 text-left"><strong>{moment(element.start).format('MM/Y')} - { !isCurrent && moment(element.end).format('MM/Y')}{ isCurrent && 'Actualidad'} · {  moment(element.start).from(element.end).replace('hace', 'Durante') }</strong></dd> }
+    {element.start && <dd className="mt-2 ml-16 text-base text-gray-500 text-left"><strong>{DateTime.fromJSDate(new Date(element.start)).toFormat('MM/y')} - { !isCurrent && DateTime.fromJSDate(new Date(element.end)).toFormat('MM/y')}{ isCurrent && 'Actualidad'} · {  timeAgo(DateTime.fromJSDate(new Date(element.start)), DateTime.fromJSDate(new Date(element.end))).replace('hace', 'Durante') }</strong></dd> }
     {element.description && !Array.isArray(element.description) && <dd className="mt-2 ml-16 text-base text-gray-500 text-left">{element.description}</dd> }
 
     
@@ -60,23 +62,23 @@ export function ElementCV(element: any) {
       className="my-masonry-grid mt-5"
       columnClassName="my-masonry-grid_column">
 
-      {element?.gallery?.map(({ alt, img, type }:any, index: number) => (
+      {element?.gallery?.map((itemGallery: ItemGallery, index: number) => (
         <div>
-        { type && type === "img" &&
+        { itemGallery.type && itemGallery.type === "img" &&
         <figure className="mb-5 border-2 rounded-t border-separate	">
           <Zoom>
             <img
-              alt={alt}
-              src={'img/' + img}
+              alt={itemGallery.name??''}
+              src={'img/' + itemGallery.src}
               width="500"
             />
           </Zoom>
-          <figcaption>{alt}</figcaption>
+          <figcaption>{itemGallery.name??''}</figcaption>
         </figure> }
         
-        { type && type === "video" &&
+        { itemGallery.type && itemGallery.type === "video" &&
         <div className="aspect-w-16 aspect-h-9">
-          <iframe title={'video'+ index} src={img} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe title={'video'+ index} src={itemGallery.src??''} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
         }
         
@@ -86,3 +88,24 @@ export function ElementCV(element: any) {
     </dd>}
   </div>);
 }
+
+
+const units: Intl.RelativeTimeFormatUnit[] = [
+  'year',
+  'month',
+  'week',
+  'day',
+  'hour',
+  'minute',
+  'second',
+];
+
+export const timeAgo = (dateTime: DateTime, dateTime2: DateTime) => {
+  const diff = dateTime.diff(dateTime2).shiftTo(...units);
+  const unit = units.find((unit) => diff.get(unit) !== 0) || 'second';
+
+  const relativeFormatter = new Intl.RelativeTimeFormat('es', {
+    numeric: 'auto',
+  });
+  return relativeFormatter.format(Math.trunc(diff.as(unit)), unit);
+};

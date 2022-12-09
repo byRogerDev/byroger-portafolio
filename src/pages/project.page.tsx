@@ -1,8 +1,5 @@
-
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import { Welcome } from '../components/header';
@@ -22,7 +19,6 @@ export function ProjectPage(props:any) {
         if ( t.length > 0 ){
             setTechs(t)
         } 
-        //setTechs(t);
     }
 
     useEffect( () => {
@@ -31,17 +27,7 @@ export function ProjectPage(props:any) {
 
 
     console.log(techs);
-    /*
-    const dispacth = useDispatch;
 
-    const project = async () => {
-        try{
-            const result = await getProject(name);
-            dispacth;
-        }catch(err){
-
-        }
-    }*/
 
     return (
         <HelmetProvider>

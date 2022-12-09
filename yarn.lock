@@ -2013,6 +2013,11 @@
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
 
+"@types/luxon@^3.1.0":
+  "integrity" "sha512-gCd/HcCgjqSxfMrgtqxCgYk/22NBQfypwFUG7ZAyG/4pqs51WLTcUzVp1hqTbieDYeHS3WoVEh2Yv/2l+7B0Vg=="
+  "resolved" "https://registry.npmjs.org/@types/luxon/-/luxon-3.1.0.tgz"
+  "version" "3.1.0"
+
 "@types/mime@*":
   "integrity" "sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA=="
   "resolved" "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
@@ -3454,7 +3459,7 @@
     "css-what" "^6.0.1"
     "domhandler" "^4.3.1"
     "domutils" "^2.8.0"
-    "nth-check" "^2.0.1"
+    "nth-check" "^2.1.1"
 
 "css-tree@^1.1.2":
   "integrity" "sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q=="
@@ -6168,6 +6173,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"luxon@^3.1.1":
+  "integrity" "sha512-Ah6DloGmvseB/pX1cAmjbFvyU/pKuwQMQqz7d0yvuDlVYLTs2WeDHQMpC8tGjm1da+BriHROW/OEIT/KfYg6xw=="
+  "resolved" "https://registry.npmjs.org/luxon/-/luxon-3.1.1.tgz"
+  "version" "3.1.1"
+
 "lz-string@^1.4.4":
   "integrity" "sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ=="
   "resolved" "https://registry.npmjs.org/lz-string/-/lz-string-1.4.4.tgz"
@@ -6316,11 +6326,6 @@
   dependencies:
     "minimist" "^1.2.6"
 
-"moment@^2.29.4":
-  "integrity" "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
-  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
-  "version" "2.29.4"
-
 "ms@^2.1.1", "ms@2.1.2":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
@@ -6416,7 +6421,7 @@
   dependencies:
     "boolbase" "~1.0.0"
 
-"nth-check@^2.0.1":
+"nth-check@^2.1.1":
   "integrity" "sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w=="
   "resolved" "https://registry.npmjs.org/nth-check/-/nth-check-2.1.1.tgz"
   "version" "2.1.1"

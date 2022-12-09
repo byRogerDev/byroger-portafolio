@@ -16,7 +16,7 @@ export function FormacionAcademica(props: any) {
                             <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
 
                                 {props.academies.map(({ name, year, place, img }: any, index: number) => (
-                                    <ElementCV key={'academy' + index} name={name} year={year} place={place} index={index} tag='academy' img={img}></ElementCV>
+                                    <ElementCV key={'ElementCV_academy_' + index} name={name} year={year} place={place} index={index} tag='academy' img={img}></ElementCV>
                                 ))}
 
                             </dl>

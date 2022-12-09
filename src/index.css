@@ -34,3 +34,12 @@ code {
 .my-masonry-grid_column > figure { /* change div to reference your elements you put in <Masonry> */
  
 }
+
+.padding-tech{
+  padding-left: 0.45rem !important;
+  padding-right: 0.45rem !important;
+}
+
+.flex-tech{
+  display:inline-flex;
+}
